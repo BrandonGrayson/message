@@ -1,3 +1,7 @@
+const { hash } = window.location;
+
+console.log(atob(hash.replace('#', '')));
+
 // select the form 
 
 document.querySelector('form').addEventListener('submit', event => {
