@@ -1,6 +1,17 @@
+// Select window element store it to hash object
 const { hash } = window.location;
 
-console.log(atob(hash.replace('#', '')));
+const message = atob(hash.replace('#', ''));
+
+// If there is a message select add or subtract hide class 
+// Present value as the message to user
+
+if (message) {
+    document.querySelector('#message-form').classList.add('hide');
+    document.querySelector('#message-show').classList.remove('hide');
+
+    document.querySelector('h1').innerHTML = message;
+}
 
 // select the form 
 
